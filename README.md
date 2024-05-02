@@ -9,8 +9,8 @@
 
 Join chat page
 
-![](./public/Screenshot1.png)
+![](./client/public/Screenshot1.png)
 
 Chat room page
 
-![](./public/Screenshot2.png)
+![](./client/public/Screenshot2.png)
