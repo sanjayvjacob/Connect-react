@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import { IoSend } from "react-icons/io5";
 
 function Chat({ socket, username, room,}) {
   const [currentMessage, setCurrentMessage] = useState("");
@@ -33,7 +34,7 @@ function Chat({ socket, username, room,}) {
   return (
     <div className="chatWindow">
       <div className="chat-header">
-        <p>Live Chat</p>
+        <p>Connect</p>
       </div>
       <div className="chat-body">
         <ScrollToBottom className="message-container">
@@ -69,7 +70,7 @@ function Chat({ socket, username, room,}) {
             event.key === "Enter" && sendMessage();
           }}
         />
-        <button onClick={sendMessage}>&#9658;</button>
+        <button onClick={sendMessage}><IoSend /></button>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ function App() {
     <div className='App'>
       {!showChat ? (
       <div className='joinChatContainer'>
-      <h3>Join a Chat</h3>
+      <h3>Connect</h3>
       <input 
       type="text" 
       placeholder='John' 
@@ -31,7 +31,7 @@ function App() {
       type="text" 
       placeholder='Room ID...'
       onChange={(event) => {setRoom(event.target.value)}}/>
-      <button onClick={joinRoom}>Join am Room</button>
+      <button onClick={joinRoom}>Join a room</button>
       </div>
       )
       :(
