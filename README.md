@@ -1,4 +1,4 @@
-## Realtime Chat App
+## Connect - Realtime Chat App
 
 ## Users should be able to:
 
