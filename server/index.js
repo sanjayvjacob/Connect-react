@@ -1,3 +1,4 @@
+const path = require("path"); //new
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -6,6 +7,8 @@ const { Server } = require("socket.io");
 app.use(cors());
 
 const server = http.createServer(app);
+
+// const __dirname = path.resolve();
 
 const io = new Server(server, {
   cors: {
@@ -30,8 +33,14 @@ io.on("connection", (socket) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("Server is running"); //  response 
+// app.get("/", (req, res) => {
+//   res.send("Server is running");
+// });
+
+app.use(express.static(path.join(__dirname, "client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
 server.listen(5174, () => {
