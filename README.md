@@ -18,7 +18,7 @@ each other instantly over the internet.</p>
 <br>
 <div align='center'>
 Join chat page
-![](./client/public/Screenshot1.png)
+<img src='./client/public/Screenshot1.png'/>
 Chat room page
-![](./client/public/Screenshot2.png)
+<img src='./client/public/Screenshot2.png'/>
 </div>
