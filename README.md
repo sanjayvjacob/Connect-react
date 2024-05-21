@@ -1,4 +1,4 @@
-<div align='center'><img style="width:20%" src='./client/public/chat.png'/><h1>Connect</h1></div>
+<div align='center'><img style="width:5%" src='./client/public/chat.png'/><h1>Connect</h1></div>
 
 <h2>About the project</h2>
 
