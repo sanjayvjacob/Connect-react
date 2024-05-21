@@ -1,4 +1,3 @@
-const path = require("path"); //new
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -8,11 +7,9 @@ app.use(cors());
 
 const server = http.createServer(app);
 
-// const __dirname = path.resolve();
-
 const io = new Server(server, {
   cors: {
-    origin: "https://connect-react-production.onrender.com/",
+    origin: "https://connect-react-server.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
@@ -33,14 +30,8 @@ io.on("connection", (socket) => {
   });
 });
 
-// app.get("/", (req, res) => {
-//   res.send("Server is running");
-// });
-
-app.use(express.static(path.join(__dirname, "client/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+app.get("/", (req, res) => {
+  res.send("Server is running");
 });
 
 server.listen(5174, () => {
