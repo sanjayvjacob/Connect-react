@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://connect-react-client.vercel.app",
+    origin: "https://connect-react-production.onrender.com/",
     methods: ["GET", "POST"],
   },
 });
