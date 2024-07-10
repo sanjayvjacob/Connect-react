@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://connect-react-server.vercel.app/",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
 });
@@ -28,10 +28,6 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("User Disconnected", socket.id);
   });
-});
-
-app.get("/", (req, res) => {
-  res.send("Server is running");
 });
 
 server.listen(5174, () => {
